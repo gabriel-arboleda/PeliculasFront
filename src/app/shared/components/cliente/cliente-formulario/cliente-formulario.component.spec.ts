@@ -59,4 +59,13 @@ describe('ClienteFormularioComponent', () => {
 
     expect(component.clienteFormulario.valid).toBeFalsy();
   });
+
+  it('Se diligencia todos los campos del formulario de cliente', () => {
+    component.clienteFormulario.controls.docIdentidad.setValue('125');
+    component.clienteFormulario.controls.nombres.setValue('Felipe');
+    component.clienteFormulario.controls.apellidos.setValue('Franco');
+
+    expect(component.clienteFormulario.valid).toBeTruthy();
+  });
+
 });
