@@ -84,6 +84,10 @@ import { PrestamoComponent } from './components/prestamo/prestamo.component';
     MatDatepickerModule,
     MatRadioModule,
     MatSelectModule
+  ],
+  providers: [
+    MatDatepickerModule,
+    {provide: MAT_DATE_LOCALE, useValue: 'es-ES'}
   ]
 })
 export class SharedModule { }

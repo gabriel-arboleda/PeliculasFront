@@ -52,9 +52,6 @@ export class PrestamoFormularioComponent implements OnInit {
   }
 
   clienteSeleccionado(clienteSeleccionado: Cliente, o1: Cliente): boolean {
-    console.log(clienteSeleccionado,"ele");
-    console.log(o1,"o1");
-
     return o1.docIdentidad === clienteSeleccionado.docIdentidad;
   }
 
