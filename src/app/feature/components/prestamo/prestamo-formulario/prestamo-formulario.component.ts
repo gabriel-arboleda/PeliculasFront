@@ -68,7 +68,7 @@ export class PrestamoFormularioComponent implements OnInit {
       Swal.fire('Exito', 'Se guardo la informacion con exito', 'success');
       this.prestamoService.notificarEstadoPrestamo.emit();
     }, (error) => {
-      Swal.fire('Error', `Se genero un error guardando la información del prestamo`, 'error');
+      Swal.fire('Error', error.error.mensaje, 'error');
     });
   }
 

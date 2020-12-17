@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { PeliculaService } from 'src/app/core/services/pelicula.service';
+import { Pelicula } from 'src/app/shared/models/pelicula.model';
 import Swal from 'sweetalert2';
-import { Pelicula } from '../../models/pelicula.model';
 import { PeliculaFormularioComponent } from './pelicula-formulario/pelicula-formulario.component';
 
 @Component({

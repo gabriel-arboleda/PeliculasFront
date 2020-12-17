@@ -42,7 +42,7 @@ export class ClienteFormularioComponent implements OnInit {
       Swal.fire('Exito', 'Se guardo la informacion con exito', 'success');
       this.clienteService.notificarEstadoCliente.emit();
     }, (error) => {
-      Swal.fire('Error', `Se genero un error guardando la información de ${cliente.nombres}`, 'error');
+      Swal.fire('Error', error.error.mensaje, 'error');
     });
   }
 

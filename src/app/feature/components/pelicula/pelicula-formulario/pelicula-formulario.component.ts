@@ -41,8 +41,7 @@ export class PeliculaFormularioComponent implements OnInit {
       Swal.fire('Exito', 'Se actualizo la informacion con exito', 'success');
       this.peliculaService.notificarEstadoPelicula.emit();
     }, (error) => {
-      Swal.fire('Error', `Se genero un error guardando la información de ${pelicula.nombrePelicula}`, 'error');
-    });
+      Swal.fire('Error', error.error.mensaje, 'error');    });
   }
 
   save(): void {

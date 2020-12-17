@@ -2,14 +2,13 @@ import { HttpClient } from '@angular/common/http';
 import { EventEmitter, Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Cliente } from 'src/app/shared/models/cliente.model';
-import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ClienteService {
 
-  public sufix = 'cliente';
+  public url = '/api/cliente';
 
   private notificarEstado = new EventEmitter<any>();
 
@@ -20,15 +19,15 @@ export class ClienteService {
   }
 
   consultarClientes(): Observable<Cliente[]> {
-    return this.httpCliente.get<Cliente[]>(`${environment.endpoint}${this.sufix}`)
+    return this.httpCliente.get<Cliente[]>(this.url)
   }
 
   guardarCliente(cliente: Cliente): Observable<Cliente> {
-    return this.httpCliente.post<Cliente>(`${environment.endpoint}${this.sufix}`, cliente);
+    return this.httpCliente.post<Cliente>(this.url, cliente);
   }
 
   eliminarCliente(docIdentidad: number): Observable<any> {
-    return this.httpCliente.delete(`${environment.endpoint}${this.sufix}/${docIdentidad}`);
+    return this.httpCliente.delete(`${this.url}/${docIdentidad}`);
   }
 
 }

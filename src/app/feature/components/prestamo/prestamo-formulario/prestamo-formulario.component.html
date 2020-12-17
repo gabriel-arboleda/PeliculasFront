@@ -4,8 +4,8 @@
 
         <mat-form-field appearance="outline" class="example-full-width">
             <mat-label>Cliente:</mat-label>
-            <mat-select [formControlName]="'cliente'" name="cliente">
-                <mat-option matInput *ngFor="let cliente of listaClientes" [value]="cliente">{{cliente.nombres}} {{cliente.apellidos}}</mat-option>
+            <mat-select [formControlName]="'cliente'" name="cliente" id="cliente">
+                <mat-option matInput *ngFor="let cliente of listaClientes" id="cliente1" [value]="cliente">{{cliente.nombres}} {{cliente.apellidos}}</mat-option>
             </mat-select>
             <mat-icon matSuffix>person</mat-icon>
             <mat-error *ngIf="hasError('cliente', 'required')">
@@ -18,8 +18,8 @@
 
         <mat-form-field appearance="outline" class="example-full-width">
             <mat-label>Pelicula:</mat-label>
-            <mat-select [compareWith]="peliculaSeleccionada" [formControlName]="'pelicula'" name="pelicula">
-                <mat-option matInput *ngFor="let pelicula of listaPeliculas" [value]="pelicula">{{pelicula.idPelicula}}-{{pelicula.nombrePelicula}}</mat-option>
+            <mat-select [compareWith]="peliculaSeleccionada" [formControlName]="'pelicula'" name="pelicula" id="pelicula">
+                <mat-option matInput *ngFor="let pelicula of listaPeliculas" [value]="pelicula" id="pelicula1">{{pelicula.idPelicula}}-{{pelicula.nombrePelicula}}</mat-option>
             </mat-select>
             <mat-icon matSuffix>person</mat-icon>
             <mat-error *ngIf="hasError('pelicula', 'required')">
@@ -32,7 +32,7 @@
     <div class="col-md-3">
         <mat-form-field appearance="outline">
             <mat-label>Fecha de devolucion:</mat-label>
-            <input matInput [matDatepicker]="myDatepicker" [formControlName]="'fechaDevolucion'" name="fechaDevolucion">
+            <input matInput [matDatepicker]="myDatepicker" [formControlName]="'fechaDevolucion'" name="fechaDevolucion" id="fechaDevolucion">
             <mat-datepicker-toggle matSuffix [for]="myDatepicker"></mat-datepicker-toggle>
             <mat-datepicker #myDatepicker></mat-datepicker>
             <mat-error *ngIf="hasError('fechaDevolucion', 'required')">La <strong>Fecha de devolucion </strong> es obligatoria
@@ -49,6 +49,6 @@
 
 <mat-dialog-actions>
     <button class="mat-raised-button" (click)="close()">Cerrar</button>
-    <button mat-button class="mat-raised-button mat-primary" (click)="save()"
+    <button mat-button class="mat-raised-button mat-primary" id="guardar" (click)="save()"
         [disabled]="prestamoFormulario.invalid">Guardar</button>
 </mat-dialog-actions>
