@@ -1,29 +1,29 @@
 <mat-card>
-    <button class="crearCliente" mat-stroked-button (click)="editarOCrear()">Crear</button>
+    <button class="crearCliente" id='crearCliente' mat-stroked-button (click)="editarOCrear()">Crear</button>
     <table mat-table [dataSource]="listaClientes" class="mat-elevation-z8">
 
         <ng-container matColumnDef="docIdentidad">
             <th mat-header-cell *matHeaderCellDef> Documento de Identidad </th>
-            <td mat-cell *matCellDef="let element"> {{element.docIdentidad}} </td>
+            <td mat-cell *matCellDef="let element" id="docIdentidad"> {{element.docIdentidad}} </td>
         </ng-container>
 
         <ng-container matColumnDef="nombres">
             <th mat-header-cell *matHeaderCellDef> Nombres </th>
-            <td mat-cell *matCellDef="let element"> {{element.nombres}} </td>
+            <td mat-cell *matCellDef="let element" id="nombres"> {{element.nombres}} </td>
         </ng-container>
 
         <ng-container matColumnDef="apellidos">
             <th mat-header-cell *matHeaderCellDef> Apellidos </th>
-            <td mat-cell *matCellDef="let element"> {{element.apellidos}} </td>
+            <td mat-cell *matCellDef="let element" id="apellidos"> {{element.apellidos}} </td>
         </ng-container>
 
         <ng-container matColumnDef="accion">
             <th mat-header-cell *matHeaderCellDef> Acción </th>
             <td mat-cell *matCellDef="let element">
-                <button mat-icon-button (click)="editarOCrear(element)">
+                <button mat-icon-button id='editarCliente' (click)="editarOCrear(element)">
                     <mat-icon>edit</mat-icon>
                 </button>
-                <button mat-icon-button (click)="eliminar(element)">
+                <button mat-icon-button id='eliminarCliente' (click)="eliminar(element)">
                     <mat-icon>delete</mat-icon>
                 </button>
             </td>

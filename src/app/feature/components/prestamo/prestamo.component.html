@@ -9,18 +9,18 @@
     
     <button class="buscarPrestamos" mat-stroked-button (click)="buscarPrestamos()">Buscar Prestamos</button>
 
-    <button class="CrearPrestamo" mat-stroked-button (click)="crearPrestamo()">Crear Prestamos</button>
+    <button class="CrearPrestamo" id="crearPrestamo" mat-stroked-button (click)="crearPrestamo()">Crear Prestamos</button>
 
     <table mat-table [dataSource]="listaPrestamos" class="mat-elevation-z8">
 
         <ng-container matColumnDef="nombrePelicula">
             <th mat-header-cell *matHeaderCellDef> Nombre pelicula </th>
-            <td mat-cell *matCellDef="let element"> {{element.pelicula.idPelicula}}-{{element.pelicula.nombrePelicula}} </td>
+            <td mat-cell *matCellDef="let element" id="nombrePelicula"> {{element.pelicula.idPelicula}}-{{element.pelicula.nombrePelicula}} </td>
         </ng-container>
 
         <ng-container matColumnDef="genero">
             <th mat-header-cell *matHeaderCellDef> Genero </th>
-            <td mat-cell *matCellDef="let element"> {{element.pelicula.genero}} </td>
+            <td mat-cell *matCellDef="let element" id="genero"> {{element.pelicula.genero}} </td>
         </ng-container>
 
         <ng-container matColumnDef="accion">
