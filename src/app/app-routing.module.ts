@@ -1,12 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { ClienteFormularioComponent } from './shared/components/cliente/cliente-formulario/cliente-formulario.component';
-import { ClienteComponent } from './shared/components/cliente/cliente.component';
-import { PeliculaFormularioComponent } from './shared/components/pelicula/pelicula-formulario/pelicula-formulario.component';
-import { PeliculaComponent } from './shared/components/pelicula/pelicula.component';
-import { PrestamoFormularioComponent } from './shared/components/prestamo/prestamo-formulario/prestamo-formulario.component';
-import { PrestamoComponent } from './shared/components/prestamo/prestamo.component';
-
+import { ClienteFormularioComponent } from './feature/components/cliente/cliente-formulario/cliente-formulario.component';
+import { ClienteComponent } from './feature/components/cliente/cliente.component';
+import { PeliculaFormularioComponent } from './feature/components/pelicula/pelicula-formulario/pelicula-formulario.component';
+import { PeliculaComponent } from './feature/components/pelicula/pelicula.component';
+import { PrestamoFormularioComponent } from './feature/components/prestamo/prestamo-formulario/prestamo-formulario.component';
+import { PrestamoComponent } from './feature/components/prestamo/prestamo.component';
 const routes: Routes = [
   {
       path: 'prestamos',

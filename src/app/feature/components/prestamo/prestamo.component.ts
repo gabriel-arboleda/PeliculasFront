@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { PrestamoService } from 'src/app/core/services/prestamo.service';
+import { Prestamo } from 'src/app/shared/models/prestamo.model';
 import Swal from 'sweetalert2';
-import { Prestamo } from '../../models/prestamo.model';
 import { PrestamoFormularioComponent } from './prestamo-formulario/prestamo-formulario.component';
 
 @Component({

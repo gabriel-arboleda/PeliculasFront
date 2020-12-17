@@ -2,14 +2,13 @@ import { HttpClient } from '@angular/common/http';
 import { EventEmitter, Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Prestamo } from 'src/app/shared/models/prestamo.model';
-import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PrestamoService {
   
-  public sufix = 'prestamo';
+  public url = '/api/prestamo';
   
   private notificarEstado = new EventEmitter<any>();
 
@@ -20,15 +19,15 @@ export class PrestamoService {
   }
 
   consultarPrestamoPorCliente( docIdentidad: number): Observable<Prestamo[]> {
-    return this.httpCliente.get<Prestamo[]>(`${environment.endpoint}${this.sufix}/${docIdentidad}`)
+    return this.httpCliente.get<Prestamo[]>(`${this.url}/${docIdentidad}`)
   }
 
   guardarPrestamo(prestamo: Prestamo): Observable<Prestamo> {
-    return this.httpCliente.post<Prestamo>(`${environment.endpoint}${this.sufix}`, prestamo);
+    return this.httpCliente.post<Prestamo>(this.url, prestamo);
   }
 
   eliminarPrestamo(idPrestamo: number): Observable<any> {
-    return this.httpCliente.delete(`${environment.endpoint}${this.sufix}/${idPrestamo}`);
+    return this.httpCliente.delete(`${this.url}/${idPrestamo}`);
   }
   
 }

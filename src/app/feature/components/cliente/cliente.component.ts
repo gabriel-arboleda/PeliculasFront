@@ -3,8 +3,8 @@ import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import Swal from 'sweetalert2';
 import { Observable, Subscription } from 'rxjs';
 import { ClienteService } from 'src/app/core/services/cliente.service';
-import { Cliente } from '../../models/cliente.model';
 import { ClienteFormularioComponent } from './cliente-formulario/cliente-formulario.component';
+import { Cliente } from 'src/app/shared/models/cliente.model';
 
 @Component({
   selector: 'app-cliente',

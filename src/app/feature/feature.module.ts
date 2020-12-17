@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ClienteComponent } from './components/cliente/cliente.component';
+import { ClienteFormularioComponent } from './components/cliente/cliente-formulario/cliente-formulario.component';
 import { BrowserModule } from '@angular/platform-browser';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatButtonModule} from '@angular/material/button';
@@ -18,12 +20,21 @@ import { MatNativeDateModule, MAT_DATE_LOCALE } from '@angular/material/core';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatSelectModule } from '@angular/material/select';
-import { HeaderComponent } from './header/header.component';
 import { AppRoutingModule } from '../app-routing.module';
+import { PeliculaComponent } from './components/pelicula/pelicula.component';
+import { PeliculaFormularioComponent } from './components/pelicula/pelicula-formulario/pelicula-formulario.component';
+import { PrestamoFormularioComponent } from './components/prestamo/prestamo-formulario/prestamo-formulario.component';
+import { PrestamoComponent } from './components/prestamo/prestamo.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
-    HeaderComponent
+    ClienteComponent,
+    ClienteFormularioComponent,
+    PeliculaComponent,
+    PeliculaFormularioComponent,
+    PrestamoComponent,
+    PrestamoFormularioComponent,
   ],
   imports: [
     AppRoutingModule,
@@ -47,10 +58,10 @@ import { AppRoutingModule } from '../app-routing.module';
     MatNativeDateModule,
     MatDatepickerModule,
     MatRadioModule,
-    MatSelectModule
+    MatSelectModule,
+    BrowserAnimationsModule
   ],
   exports:[
-    HeaderComponent,
     CommonModule,
     BrowserModule,
     MatMenuModule,
@@ -71,11 +82,12 @@ import { AppRoutingModule } from '../app-routing.module';
     MatNativeDateModule,
     MatDatepickerModule,
     MatRadioModule,
-    MatSelectModule
+    MatSelectModule,
+    BrowserAnimationsModule,
   ],
   providers: [
     MatDatepickerModule,
     {provide: MAT_DATE_LOCALE, useValue: 'es-ES'}
   ]
 })
-export class SharedModule { }
+export class FeatureModule { }
