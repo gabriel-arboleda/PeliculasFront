@@ -13,7 +13,7 @@ import { PrestamoFormularioComponent } from './prestamo-formulario/prestamo-form
 })
 export class PrestamoComponent implements OnInit {
 
-  displayedColumns: string[] = ['nombrePelicula', 'genero', 'accion'];
+  displayedColumns: string[] = ['nombrePelicula', 'genero', 'valorPrestamo', 'accion'];
   listaPrestamos: Prestamo[] = [];
   busqueda: FormGroup;
 

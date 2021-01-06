@@ -23,6 +23,11 @@
             <td mat-cell *matCellDef="let element" id="genero"> {{element.pelicula.genero}} </td>
         </ng-container>
 
+        <ng-container matColumnDef="valorPrestamo">
+            <th mat-header-cell *matHeaderCellDef> Valor del prestamo </th>
+            <td mat-cell *matCellDef="let element" id="genero"> {{element.valorPrestamo}} </td>
+        </ng-container>
+
         <ng-container matColumnDef="accion">
             <th mat-header-cell *matHeaderCellDef> Acción </th>
             <td mat-cell *matCellDef="let element">
